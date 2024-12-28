@@ -84,8 +84,29 @@ Prototype and build IoT systems without setting up servers or developing web sof
 ![image](https://github.com/user-attachments/assets/5beaf86c-0d5d-4b99-9c22-bb0351f487ab)
 
 # PROGRAM:
+~~~
+const int Soil_pin = 25;  // Soil MOisture */ ADC CH2
 
-![Screenshot 2024-12-21 100836](https://github.com/user-attachments/assets/af602a03-0115-4b9b-b46e-6bcba5d570d7)
+void setup() {
+
+  Serial.begin(9600);
+  
+}
+
+void loop() {
+
+  int Soil_adc_val;
+  
+  Soil_adc_val = analogRead(Soil_pin);  /* Read Temperature */
+  
+  Serial.print("Soil Moisture Range = ");
+  
+  Serial.println(Soil_adc_val);
+  
+  delay(1000);
+  
+}
+~~~
 
 # CIRCUIT DIAGRAM:
 
